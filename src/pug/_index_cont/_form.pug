@@ -4,6 +4,38 @@
 
 .partForm
   .u-inner
-    input(type="text")
+    // class, action, methodを変更しないでください
+    .formBox
+      form.formrun(action="https://form.run/api/v1/r/y82y7e9xi00o6uqrqyolssa2" method="post")
+        // ↓自由に要素を追加・編集することができます
+        .row
+          label 会社名 #[span.must 必須]
+          input(name="会社名" type="text" placeholder="会社名")
+        .row
+          label お名前 #[span.must 必須]
+          input(name="お名前" type="text" placeholder="山田 太郎" data-formrun-required="")
+          div(data-formrun-show-if-error="お名前") お名前を入力してください
+        .row
+          label メールアドレス #[span.must 必須]
+          input(name="メールアドレス" type="text" placeholder="example@mail.com" data-formrun-type="email" data-formrun-required="")
+          div(data-formrun-show-if-error="メールアドレス") メールアドレスを正しく入力してください
+        .row
+          label 電話番号 #[span.must 必須]
+          input(name="電話番号" type="text" data-formrun-required=""  placeholder="09012345678")
+          div(data-formrun-show-if-error="電話番号") 電話番号を入力してください
+        .row
+          label お問い合わせ内容 #[span.must 必須]
+          textarea(name="お問い合わせ内容" data-formrun-required="" placeholder="お問い合わせ内容を入力")
+          div(data-formrun-show-if-error="お問い合わせ内容") お問い合わせ入力してください
 
 
+        // ボット投稿をブロックするためのタグ
+        ._formrun_gotcha
+          style(media="screen").
+            ._formrun_gotcha {position:absolute!important;height:1px;width:1px;overflow:hidden;}
+          label(for="_formrun_gotcha") If you are a human, ignore this field
+          input#_formrun_gotcha(type="text" name="_formrun_gotcha" tabindex="-1")
+
+        .rowRcap
+          .g-recaptcha(data-sitekey="6LdN6ssZAAAAAOOEOmHl4XnLCRx9-rTlpD3J80IX")
+        button(type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..." disabled) 送信
