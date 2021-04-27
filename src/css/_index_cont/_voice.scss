@@ -7,5 +7,43 @@ article:not(.voiceZone){
 //  display: none;
 }
 .voiceZone{
+  background: url($pathImg + "voice/bg_wrap.png") center center repeat #eee;
+  background-size: 31px 31px;
+  padding: 42px 0 80px;
+  h2{
+    margin-bottom: 44px;
+    color: $blue1;
+  }
+  ul{
+    
+  }
+  li{
+    display: flex;
+    align-items: center;
+    background-color: rgba(255,255,255,0.7);
+    padding: 23px 35px 25px 40px;
+    border: 2px solid $blue1;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    + li{
+      margin-top: 20px;
+    }
+    .img{
+      flex-shrink: 0;
+      margin-right: 47px;
+    }
+    p{
+      font-size: 1.6rem;
+      line-height: (25/16);
+      strong{
+        background: linear-gradient(
+          to bottom,
+          transparent 0,
+          transparent 34%,
+          #FFFF00 34%
+        );
+      }
+    }
+  }
   
 }
