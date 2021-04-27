@@ -7,5 +7,70 @@ article:not(.companyZone){
 //  display: none;
 }
 .companyZone{
-  
+  padding: 56px 0 61px;
+  @include mq{
+    padding: vw(30) 0 vw(40);
+  }
+  .u-inner{
+    @include pc{
+      max-width: 762px;
+    }
+  }
+  h2{
+    margin-bottom: 50px;
+    color: $blue1;
+    @include mq{
+      margin-bottom: vw(30);
+    }
+  }
+  table{
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: $fwM;
+    border-bottom: 1px dashed #b8b8b8;
+    @include mq{
+      display: block;
+      width: auto;
+      font-size: 1.4rem;
+    }
+  }
+  tbody{
+    @include mq{
+      display: block;
+    }
+  }
+  tr{
+    border-top: 1px dashed #b8b8b8;
+    @include mq{
+      display: block;
+      padding-top: vw(15);
+      padding-bottom: vw(15);
+    }
+  }
+  th,
+  td{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @include mq{
+      display: block;
+    }
+  }
+  th{
+    width: 125px;
+    @include mq{
+      width: auto;
+      padding: 0;
+      font-weight: bold;
+    }
+  }
+  td{
+    padding-left: 20px;
+    @include mq{
+      padding: vw(5) 0 0;
+      font-size: 1.3em;
+    }
+  }
+
+
 }
+
