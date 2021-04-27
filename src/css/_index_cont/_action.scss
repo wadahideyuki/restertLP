@@ -4,12 +4,183 @@
  action
 ---------------------------------------*/
 article:not(.actionZone){
-//  display: none;
+  display: none;
 }
 .actionZone{
   background-color: $orange1;
+  padding: 18px 0 30px;
+  text-align: center;
+  @include mq{
+    padding: vw(7) 0 vw(31);
+  }
   h2{
+    margin-bottom: 25px;
     color: #fff;
+    font-size: 2.2rem;
+    font-weight: $fwBlk;
+    @include mq{
+      margin-bottom: vw(24);
+      font-size: 1.4rem;
+      line-height: (22/14);
+    }
+    span{
+      display: inline-block;
+      position: relative;
+      &:before,
+      &:after{
+        content: "";
+        background: url($pathImg + "action/txt_deco_slash.svg") 0 0 no-repeat;
+        background-size: 100% 100%;
+        width: em(21/22);
+        height: em(21/22);
+        position: absolute;
+        top: em(6/22);
+        @include mq{
+          background-image: url($pathImg + "action/txt_deco_slash_sp.svg");
+          width: vw(24);
+          height: vw(38);
+        }
+      }
+      &:before{
+        left: -1.0em;
+        @include mq{
+          left: vw(-18);
+        }
+      }
+      &:after{
+        right: -1.0em;
+        transform: scaleX(-1);
+        @include mq{
+          right: vw(-18);
+        }
+      }
+    }
+  }
+  .box{
+    background-color: #fff;
+    padding: 25px 35px 13px 536px;
+    border-radius: 20px;
+    position: relative;
+    @include mq{
+      display: block;
+      padding: 0 vw(16) vw(10);
+      border-radius: vw(20);
+    }
+    .img{
+      position: absolute;
+      top: -19px;
+      left: 12px;
+      @include mq{
+        margin-bottom: vw(-10);
+        position: relative;
+        top: vw(-10);
+        left: auto;
+      }
+      img{
+        @include mq{
+          width: 100%;
+        }
+      }
+    }
+    .txts{
+      h3{
+        margin-bottom: 12px;
+        padding: 4px 0 5px;
+        font-size: 1.8rem;
+        font-weight: $fwBlk;
+        border-top: 1px solid #151F3B;
+        border-bottom: 1px solid #151F3B;
+        @include mq{
+          margin-bottom: vw(10);
+          padding: vw(2) 0 vw(5);
+          font-size: 1.2rem;
+        }
+      }
+      .tel{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        font-size: 5.3rem;
+        font-weight: $fwBlk;
+        line-height: 1;
+        @include mq{
+          margin-bottom: vw(20);
+          font-size: 3.8rem;
+        }
+        &:before{
+          content: "";
+          display: block;
+          background: url($pathImg + "icn_tel.svg") 0 0 no-repeat;
+          background-size: 100% 100%;
+          width: 45px;
+          height: 45px;
+          margin-right: 6px;
+          @include mq{
+            width: vw(32);
+            height: vw(32);
+            margin-right: vw(5);
+          }
+        }
+      }
+      .copy{
+        margin-bottom: 6px;
+        color: #289A00;
+        font-size: 2.9rem;
+        font-weight: $fwM;
+        @include mq{
+          margin-bottom: vw(6);
+          font-size: 2.0rem;
+        }
+        span{
+          display: inline-block;
+          position: relative;
+          @include mq{
+          }
+          &:before,
+          &:after{
+            content: "";
+            background: url($pathImg + "action/txt_deco.svg") 0 0 no-repeat;
+            background-size: contain;
+            width: em(26/29);
+            height: em(32/29);
+            position: absolute;
+            top: em(7/29);
+            @include mq{
+            }
+          }
+          &:before{
+            left: em(-36/29);
+            @include mq{
+            }
+          }
+          &:after{
+            right: em(-36/29);
+            transform: scaleX(-1);
+            @include mq{
+            }
+          }
+        }
+      }
+      .btn{
+        margin-left: -16px;
+        margin-right: -16px;
+        @include mq{
+          margin-left: vw(-10);
+          margin-right: vw(-10);
+        }
+        a{
+          display: block;
+          @include hvrBrt;
+          img{
+            width: 461px;
+            @include mq{
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
   }
 
 }
