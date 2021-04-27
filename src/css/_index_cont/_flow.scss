@@ -7,8 +7,78 @@ article:not(.flowZone){
 //  display: none;
 }
 .flowZone{
-  background-color: #000;
+  background: url($pathImg + "flow/bg_wrap.png") center center no-repeat;
+  background-size: cover;
+  padding: 53px 0 68px;
   color: #fff;
-  
+  text-align: center;
+  @include mq{
+    padding: vw(28) 0 vw(30);
+  }
+  .u-inner{
+    @include pc{
+      max-width: 979px;
+    }
+  }
+  h2{
+    margin-bottom: 32px;
+    @include mq{
+      margin-bottom: vw(18);
+    }
+  }
+  .lead{
+    margin-bottom: 38px;
+    font-size: 1.6rem;
+    @include mq{
+      margin-bottom: vw(16);
+      font-size: 1.3rem;
+      line-height: (21/13);
+    }
+  }
+  .img{
+    margin-bottom: 41px;
+    @include mq{
+      margin-bottom: vw(20);
+    }
+  }
+  dl{
+    dt{
+      display: flex;
+      align-items: center;
+      @include mq{
+      }
+      &:before,
+      &:after{
+        content: "";
+        background-color: #fff;
+        width: 100%;
+        height: 1px;
+      }
+      span{
+        flex-shrink: 0;
+        padding: 0 22px;
+        font-size: 2.0rem;
+        font-weight: $fwBlk;
+        @include mq{
+          padding: 0 vw(15);
+          font-size: 1.7rem;
+        }
+      }
+    }
+    dd{
+      margin-top: 21px;
+      padding-bottom: 25px;
+      font-size: 1.6rem;
+      font-weight: $fwM;
+      line-height: (25/16);
+      border-bottom: 1px solid #fff;
+      @include mq{
+        margin-top: vw(10);
+        padding-bottom: vw(15);
+        font-size: 1.3rem;
+        text-align: left;
+      }
+    }
+  }
 
 }
