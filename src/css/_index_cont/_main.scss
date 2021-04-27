@@ -86,8 +86,16 @@ article:not(.mainZone){
       padding-right: vw(12);
     }
     a{
-      display: block;
+      display: inline-block;
       @include hvrBrt;
+      @include mq{
+        display: block;
+      }
+      img{
+        @include mq{
+          width: 100%;
+        }
+      }
     }
   }
   
