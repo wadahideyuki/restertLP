@@ -1,0 +1,56 @@
+//- ---------------------
+        Mixin用pug
+  -----------------------
+include _var.pug
+
+//- ----- メタ --------------------//
+//- og
+mixin og(prop, cont)
+  meta(property='og:' + prop, content=cont)
+
+
+//- ----- 読み込み --------------------//
+//- css読み込み
+mixin css(fileName)
+  link(href=fileName, rel='stylesheet', type='text/css', media='all')
+//- common内のcss読み込み
+mixin cssCommon(fileName)
+  link(href=cssPath + fileName, rel='stylesheet', type='text/css', media='all')
+//- js読み込み
+mixin js(fileName)
+  script(src=fileName, type='text/javascript')
+//- common内のjs読み込み
+mixin jsCommon(fileName)
+  script(src=jsPath + fileName, type='text/javascript')
+
+
+
+//- ----- ページパーツ --------------------//
+//- img
+mixin img(fileName, alt, className)
+  img(class=className, src=imgPath + fileName, alt=alt)
+mixin pageImg(fileName, alt, className)
+  img(class=className, src=pageImgPath + fileName, alt=alt)
+
+mixin pic(fileName, fileNameSp, alt, className)
+  picture
+    source(srcset=imgPath + fileNameSp media=spW)
+    +img(fileName, alt, className)
+
+mixin pagePic(fileName, fileNameSp, alt, className)
+  picture
+    source(srcset=pageImgPath + fileNameSp media=spW)
+    +pageImg(fileName, alt, className)
+
+
+//- 動画
+mixin mov(url)
+  iframe(src='https://www.youtube.com/embed/' + url + '?rel=0&wmode=transparent', allowfullscreen='', frameborder='0')
+
+//- ttl
+mixin ttl1(left, right)
+  h2.u-ttlBox1
+    small!= left
+    span!= right
+
+

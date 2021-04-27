@@ -1,0 +1,331 @@
+@charset "UTF-8";
+
+/*--------------------------------------
+ 要素
+---------------------------------------*/
+img{
+  max-width: 100%;
+  height: auto;
+}
+svg{
+  vertical-align: top;
+}
+input[type="text"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+textarea{
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  background: none;
+  border: none;
+}
+@mixin phStyle{
+  color: #ccc;
+  opacity: 1;
+}
+input[type="text"],
+input[type="password"]{
+  &::-webkit-input-placeholder{ /* WebKit, Blink, Edge */
+    @include phStyle;
+  }
+  &::-moz-input-placeholder{ /* Fox */
+    @include phStyle;
+  }
+  &:-ms-input-placeholder{ /* Internet Explorer 10-11 */
+    @include phStyle;
+  }
+  &::placeholder{ /* Others */
+    @include phStyle;
+  }
+}
+input[type="text"]{
+  &::-ms-clear{//IEのxボタン
+    visibility:hidden
+  }
+}
+input[type="number"]{
+  -moz-appearance: textfield;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+  }
+}
+select{
+  box-sizing: border-box;
+  &::-ms-expand {//IEで矢印を消す
+    display: none;
+  }
+}
+button{
+  font-family: inherit;
+  cursor: pointer;
+}
+
+article{
+  @include mq{
+  }
+}
+section{
+  + section{
+    @include mq{
+    }
+  }
+}
+
+
+
+/*--------------------------------------
+ パーツ
+---------------------------------------*/
+$innerW: 1300;
+$innerW2: 1200;
+.u-{
+  /* パディング */
+  @include mq{
+    &spPd1{
+      padding-left: vw(15);
+      padding-right: vw(15);
+    }
+  }
+
+
+  /* インナー */
+  &inner{
+    margin-left: auto;
+    margin-right: auto;
+    @include pc{
+      max-width: px($innerW);
+    }
+    &.sz2{
+      @include pc{
+        max-width: px($innerW2);
+      }
+    }
+    @include mqL{
+      //width: vwL(300);
+    }
+    @include tb{
+      //width: vwT(300);
+    }
+    @include mq{
+      &:not(.spPd0){
+        padding-left: vw(20);
+        padding-right: vw(20);
+      }
+    }
+  }
+
+
+
+  /* タイトル */
+  &ttl1{
+    font-size: 3.0rem;
+  }
+  &ttl2{
+    font-size: 2.4rem;
+    font-style: italic;
+  }
+  &ttlBox1{
+  }
+
+
+  /* テキスト */
+
+
+  /* テキスト色 */
+
+
+  /* 背景色 */
+  &mainColor{background-color: $mainColor;}
+  &subColor{background-color: $subColor;}
+  &accentColor{background-color: $accentColor;}
+  &red1{background-color: $red1;}
+  &red1_a50{background-color: $red1_a50;}
+
+
+  /* ボタン */
+  &btn1{
+    display: inline-block;
+    border-radius: 8px;
+    &.sz1{
+      padding: 0.5em 1.0em;
+      font-size: 1.8rem;
+    }
+    &.clr1{
+      background-color: #00f;
+      color: #fff;
+      @include hvr;
+    }
+    &.clr2{
+      @include bgHvrL(#c80000);
+      color: #fff;
+    }
+  }
+
+
+  /* ラベル */
+  &lbl{
+  }
+
+
+  /* アイコン */
+  &icnMail{
+  }
+
+
+  /* 注釈 */
+  &note1{
+  }
+
+
+  /* リスト */
+  &txtList1{//テキスト
+  }
+  &thumList1{//画像
+  }
+  &thumTxtList1{//画像とテキスト
+  }
+
+
+  /* テーブル */
+  &tbl1{
+  }
+
+
+  /* リンク集 */
+  &links1{
+  }
+
+
+  /* 箱 */
+  &pageTopMainBoxWrap{
+  }
+
+
+  &accBox{//アコーディオン
+  }
+  &accBtn{
+  }
+  &accCont{
+  }
+
+
+  /* ページャー */
+  &pager1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  /* 状態 */
+  &dis_flex_block{//pcではflex、spではblock
+    display: flex;
+    @include mq{
+      display: block;
+    }
+  }
+
+}// /.u-
+
+
+/* その他 */
+.mainSld{
+}
+
+
+/*--------------------------------------
+ プラグイン
+---------------------------------------*/
+/* Slick */
+.slick-slider{margin-bottom: 0;}
+.slick-arrow{
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100% !important;
+  width: 38px;
+  height: 59px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  transform: translate(0);
+  @include hvr;
+  @include mq{
+    width: vw(18.52);
+    height: vw(30);
+  }
+  &:before{content: normal;}
+  &.slick-prev{
+    background-image: url(../img/slk_arw1_l.png);
+    left: 20px;
+    @include mq{
+      left: vw(5);
+    }
+  }
+  &.slick-next{
+    background-image: url(../img/slk_arw1_r.png);
+    right: 20px;
+    @include mq{
+      right: vw(5);
+    }
+  }
+}
+.slick-dots li{
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  margin: 0 11px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  &.slick-active{
+    background-color: #3B3561;
+    border: 2px solid #fff;
+  }
+  @include mq{
+    width: (15/375) * 100vw;
+    height: (15/375) * 100vw;
+    margin: 0 (11/375) * 100vw;
+    &.slick-active{
+      border-width: vw(2);
+    }
+  }
+}
+
+
+.modalBox{
+  display: none;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.9);
+  .modalInner{
+    width: 600px;
+    position: absolute;
+    left: 50%;
+    margin-left: -300px;
+    top: 20%;
+    text-align: center;
+    @include mq{
+      width: 90%;
+    }
+    p{
+      text-align: left;
+      padding: 20px 0;
+      font-size: 1.5rem;
+    }
+  }
+
+  .btnClose{
+    display: inline-block;
+    font-size: 1.5rem;
+    background: #333;
+    padding: 5px;
+    color: #FFF;
+  }
+}

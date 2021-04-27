@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import "_config/reset";//リセット
+
+//プラグイン
+@import "_plugin/slick";
+@import "_plugin/slick-theme";
+@import "_plugin/animate";
+
+//共通
+@import "layout";//全体的なレイアウト(ヘッダーとか)
+@import "common";//パーツ(ボタンなど)
+
+//コンテンツ別
+@import "_index_cont/main";
+@import "_index_cont/cont1";
+
+
+@import "_plugin/class";//単独クラス
+
+
+
+
+
+

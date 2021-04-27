@@ -1,0 +1,29 @@
+@charset "UTF-8";
+//メディアクエリ用scss
+@import "init/var";
+
+$bps:(
+  "xs": "(max-width: 320px)",
+  "s": "(max-width: 599px)",
+  "m": "(max-width:" + $breakPoint + "px)",
+  "l": "(max-width: 1024px)",
+  "xl": "(max-width: 1280px)",
+  "pc": "(min-width:" + ($breakPoint + 1) + "px)",
+);
+@mixin mq($bp: m){
+  @media screen and #{map-get($bps, $bp)}{
+    @content;
+  }
+}
+
+@mixin mqMaxW($bp: 1000px) {
+	@media screen and (max-width: $bp) {
+		@content;
+	}
+}
+
+@mixin mqMinW($bp: 1000px) {
+	@media screen and (min-width: $bp) {
+		@content;
+	}
+}

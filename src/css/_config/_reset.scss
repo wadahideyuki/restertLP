@@ -1,0 +1,147 @@
+@charset "UTF-8";
+/* リセット
+---------------------------------------------------- */
+@import "mq";
+
+*:focus{
+  outline: none;
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,figure,button{
+	margin:0;
+	padding:0;
+}
+
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+	font-size:100%;
+}
+fieldset,img{
+	border:0;
+	vertical-align: top;
+}
+address,caption,cite,code,dfn,em,strong,th,var{
+	font-style:normal;
+	font-weight:inherit;
+}
+
+li{
+	list-style:none;
+}
+
+caption,th{
+	text-align:left;
+}
+
+h1,h2,h3,h4,h5,h6,small{
+	font-size:100%;
+	font-weight:inherit;
+}
+
+q:before,q:after{
+  content:'';
+}
+
+abbr,acronym{
+	border:0;
+	font-variant:normal;
+}
+
+br{
+	letter-spacing: normal;
+}
+
+/* to preserve line-height and selector appearance */
+sup{
+	vertical-align:text-top;
+}
+
+sub{
+	vertical-align:text-bottom;
+}
+
+main{
+	display: block;
+}
+
+input,textarea,select{
+	font-family:inherit;
+	font-size:inherit;
+	font-weight:inherit;
+}
+/*to enable resizing for IE*/
+input,textarea,select{
+	*font-size:100%;
+}
+
+.hover{
+}
+
+/* ページ共通
+---------------------------------------------------- */
+html{
+	color: #000;
+	font-size: 10px;
+	letter-spacing: 0;
+	@include mq{
+		font-size: vw(10);
+	}
+}
+
+body{
+	margin:0;
+	padding:0;
+	font:10px/1.4 'Noto Sans Japanese', "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+  font-size: 1.6rem;
+  word-wrap : break-word;
+  overflow-wrap : break-word;
+	@include mq{
+		-webkit-text-size-adjust: 100%;
+	}
+}
+
+*:first-child+html body{
+	font-size:87%;
+}
+
+hr{border: none;}
+
+a{
+	color:inherit;
+	text-decoration:none;
+	cursor:pointer;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+.clearfix:after{
+  content:".";  /* 新しい要素を作る */
+  display:block;  /* ブロックレベル要素に */
+  clear:both;
+  height:0;
+  visibility:hidden;
+}
+
+.clearfix{min-height: 1px;}
+* html .clearfix{
+  height:1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+
+.clear{clear:both;}
+
+.none{
+	margin:0;
+	padding:0;
+	border:none;
+}
+
+
+
+

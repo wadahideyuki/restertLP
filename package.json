@@ -1,0 +1,30 @@
+{
+  "name": "gulp_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-changed": "^3.2.0",
+    "gulp-combine-media-queries": "^0.2.0",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-svgmin": "^2.0.0",
+    "imagemin-gifsicle": "^6.0.1",
+    "imagemin-jpeg-recompress": "^6.0.0",
+    "imagemin-pngquant": "^6.0.0"
+  },
+  "devDependencies": {
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^3.0.0"
+  }
+}

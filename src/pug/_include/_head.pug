@@ -1,0 +1,21 @@
+meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+meta(http-equiv='content-script-type', content='text/javascript')
+meta(http-equiv='content-script-type', content='text/css')
+meta(name='viewport', content='width=device-width,initial-scale=1,user-scalable=no')
+title #{title}
+meta(name='description', content=desc)
+meta(name='keywords', content='')
+// OGs
++og("site_name", siteTitle)
++og("title", title)
++og("description", desc)
++og("type", (layer == "top" ? "website" : "article"))
++og("url", (layer == "top" ? siteUrl : siteUrl + pageUrl))
++og("image", ogImgPath)
+// /OGs
++css("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css")
++cssCommon("style.css")
++jsCommon("jquery-1.11.1.min.js")
++jsCommon("slick.min.js")
++jsCommon("common.js")
+

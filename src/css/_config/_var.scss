@@ -1,0 +1,88 @@
+@charset "UTF-8";
+//変数用scss
+
+//パス
+$pathImg: "../img/";
+
+//切替
+$pcDesign: 1400;
+$spDesign: 640;
+$breakPoint: 767;
+$tabBP: 1024;
+
+//単位
+$px:100px;
+	$px1:1px;
+$per:100%;
+	$per1:1%;
+$vw:100vw;
+	$vw1:1vw;
+$em:100em;
+	$em1:1em;
+$rem:100rem;
+	$rem1:1rem;
+
+//色
+$mainColor:#f00;
+$subColor:#0f0;
+$accentColor:#00f;
+$red1: rgba(200,0,0,1.0);
+$red1_a50: rgba(200,0,0,0.5);
+
+
+//function
+@function px($suuji){
+	@return $suuji * 1px;
+}
+@function px100($suuji){
+	@return $suuji * 100px;
+}
+@function vw1($suuji){
+	@return ($suuji / $spDesign) * 1vw;
+}
+@function vw($suuji){
+	@return ($suuji / $spDesign) * 100vw;
+}
+@function vwL($suuji){//PC幅の時
+	@return ($suuji / $pcDesign) * 100vw;
+}
+@function vwT($suuji){//タブレット幅の時
+	@return ($suuji / $tabBP) * 100vw;
+}
+@function per1($suuji){
+	@return percentage($suuji / 100);
+}
+@function em($suuji){
+	@return ($suuji) * 1em;
+}
+
+
+//mixin
+@mixin hvr($op:0.7){
+	transition: opacity 0.3s;
+	&:hover{opacity: $op;}
+}
+@mixin hvrL($color){
+	transition: background-color 0.3s;
+	&:hover{background-color: $color;}
+}
+@mixin bgHvrL($color, $per: 15){
+  background-color: $color;
+	transition: background-color 0.3s;
+	&:hover{background-color: lighten($color, $per);}
+}
+@mixin hvrBrt($brt:1.5){
+	transition: filter 0.3s;
+	&:hover{filter: brightness(percentage($brt));}
+}
+
+
+//フォントの種類
+@mixin anti{-webkit-font-smoothing: antialiased;}
+@mixin yugo{font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";}
+@mixin yugoM{font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体";}
+@mixin noto{font-family: 'Noto Sans Japanese', sans-serif;}
+
+
+
+

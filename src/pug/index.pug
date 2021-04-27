@@ -1,0 +1,21 @@
+include /_include/_mixin.pug
+
+doctype html
+html(lang="ja")
+  head
+    include /_include/_head.pug
+
+  body
+    .l-wrapper
+      include /_include/_header.pug
+
+
+      main.l-cont
+        article.mainZone
+          include /_index_cont/_main.pug
+
+        article.cont1Zone
+          include /_index_cont/_cont1.pug
+
+
+      include /_include/_footer.pug

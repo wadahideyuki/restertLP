@@ -1,0 +1,36 @@
+doctype transitional
+html(xmlns='http://www.w3.org/1999/xhtml')
+  include /_config/_mixin.pug
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(http-equiv='content-script-type', content='text/javascript')
+    meta(http-equiv='content-script-type', content='text/css')
+    meta(name='viewport', content='width=device-width,initial-scale=1,user-scalable=no')
+    title スタイルガイド
+    meta(name='description', content=``)
+    meta(name='keywords', content='')
+    link(href='https://fonts.googleapis.com/earlyaccess/notosansjapanese.css', rel='stylesheet', type='text/css', media='all')
+    +cssCommon("style.css")
+    +jsCommon("jquery-1.11.1.min.js")
+    +jsCommon("slick.min.js")
+    +jsCommon("common.js")
+    link(href='styleguide.css', rel='stylesheet', type='text/css', media='all')
+  body
+    // wrapper
+    #wrapper
+      main.styleguide
+        h1 スタイルガイド用
+        .colWrap
+          aside.colSide
+            include /_side.pug
+
+          article.colMain
+            include /_main.pug
+
+
+
+
+
+
+
+

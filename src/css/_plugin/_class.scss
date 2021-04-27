@@ -1,0 +1,396 @@
+@charset "UTF-8";
+//クラス用scss
+
+.pc{}
+@include pc{
+	.sp{display: none !important;}
+}
+
+
+/*-- Width --*/
+.WAuto{width:auto !important;}
+//$iW : 0;
+//@while $iW <= 300{
+//	.W#{$iW}{width: $iW * 1px !important;}
+//	$iW: $iW+5;
+//}
+//$iW2 : 1;
+//@while $iW2 <= 100{
+//	.W#{$iW2}{
+//		&P{width: $iW2 * 1% !important;}
+//		&V{width: $iW2 * 1vw !important;}
+//		&E{width: $iW2 * 0.1em !important;}
+//	}
+//	$iW2: $iW2+1;
+//}
+
+/*-- Margin --*/
+.M{
+	&0{margin: 0 !important;}
+	&A{margin: auto !important;}
+	&TA{margin-top: auto !important;}
+	&RA{margin-right: auto !important;}
+	&BA{margin-bottom: auto !important;}
+	&LA{margin-left: auto !important;}
+}
+
+//$iM : 0;
+//@while $iM <= 100{
+//	.M{
+//		&T#{$iM}{margin-top: $iM * 1px !important;}
+//		&R#{$iM}{margin-right: $iM * 1px !important;}
+//		&B#{$iM}{margin-bottom: $iM * 1px !important;}
+//		&L#{$iM}{margin-left: $iM * 1px !important;}
+//	}
+//	$iM: $iM+5;
+//}
+//
+//@for $iMP from 0 through 100{
+//	.M{
+//		&T#{$iMP}P{margin-top: $iMP * 1% !important;}
+//		&R#{$iMP}P{margin-right: $iMP * 1% !important;}
+//		&B#{$iMP}P{margin-bottom: $iMP * 1% !important;}
+//		&L#{$iMP}P{margin-left: $iMP * 1% !important;}
+//	}
+//	$iMP: $iMP+1;
+//}
+//
+//@for $iMV from 0 through 100{
+//	.M{
+//		&T#{$iMV}V{margin-top: $iMV * 1vw !important;}
+//		&R#{$iMV}V{margin-right: $iMV * 1vw !important;}
+//		&B#{$iMV}V{margin-bottom: $iMV * 1vw !important;}
+//		&L#{$iMV}V{margin-left: $iMV * 1vw !important;}
+//	}
+//	$iMV: $iMV+1;
+//}
+//
+//@for $iME from 0 through 100{
+//	.M{
+//		&T#{$iME}E{margin-top: $iME * 0.1em !important;}
+//		&R#{$iME}E{margin-right: $iME * 0.1em !important;}
+//		&B#{$iME}E{margin-bottom: $iME * 0.1em !important;}
+//		&L#{$iME}E{margin-left: $iME * 0.1em !important;}
+//	}
+//	$iME: $iME+1;
+//}
+
+/*-- Padding --*/
+.P{
+	&0{padding: 0 !important;}
+	&A{padding: auto !important;}
+	&TA{padding-top: auto !important;}
+	&RA{padding-right: auto !important;}
+	&BA{padding-bottom: auto !important;}
+	&LA{padding-left: auto !important;}
+}
+//$iP : 0;
+//@while $iP <= 100{
+//	.P{
+//		&T#{$iP}{padding-top: $iP * 1px !important;}
+//		&R#{$iP}{padding-right: $iP * 1px !important;}
+//		&B#{$iP}{padding-bottom: $iP * 1px !important;}
+//		&L#{$iP}{padding-left: $iP * 1px !important;}
+//	}
+//	$iP: $iP+5;
+//}
+//
+//@for $iPP from 0 through 100{
+//	.P{
+//		&T#{$iPP}P{padding-top: $iPP * 1% !important;}
+//		&R#{$iPP}P{padding-right: $iPP * 1% !important;}
+//		&B#{$iPP}P{padding-bottom: $iPP * 1% !important;}
+//		&L#{$iPP}P{padding-left: $iPP * 1% !important;}
+//	}
+//	$iPP: $iPP+1;
+//}
+//
+//@for $iPV from 0 through 100{
+//	.P{
+//		&T#{$iPV}V{padding-top: $iPV * 1vw !important;}
+//		&R#{$iPV}V{padding-right: $iPV * 1vw !important;}
+//		&B#{$iPV}V{padding-bottom: $iPV * 1vw !important;}
+//		&L#{$iPV}V{padding-left: $iPV * 1vw !important;}
+//	}
+//	$iPV: $iPV+1;
+//}
+//
+//@for $iPE from 0 through 100{
+//	.P{
+//		&T#{$iPE}E{padding-top: $iPE * 0.1em !important;}
+//		&R#{$iPE}E{padding-right: $iPE * 0.1em !important;}
+//		&B#{$iPE}E{padding-bottom: $iPE * 0.1em !important;}
+//		&L#{$iPE}E{padding-left: $iPE * 0.1em !important;}
+//	}
+//	$iPE: $iPE+1;
+//}
+
+/*-- Font --*/
+.ffNS{font-family: "Noto Sans Japanese";}
+
+@for $iFz from 6 through 50{
+	.fz#{$iFz}{font-size: $iFz * 1px;}
+	.fz#{$iFz}R{font-size: $iFz * 0.1rem;}
+}
+
+.fw{
+	&B{font-weight: bold !important;}
+	&N{font-weight: normal !important;}
+}
+
+@for $iLh from 8 through 30{
+	.lh#{$iLh}{line-height: $iLh * 0.1 !important;}
+}
+
+/*-- Etc --*/
+.dis{
+	&I{display:inline !important;}
+	&B{display:block !important;}
+	&IB{display:inline-block !important;}
+	&T{display:table !important;}
+	&TC{display:table-cell !important;}
+	&N{display:none !important;}
+	&F{display: flex !important;}
+}
+
+.jc{
+  &FS{justify-content: flex-start !important;}
+  &FE{justify-content: flex-end !important;}
+  &C{justify-content: center !important;}
+  &SB{justify-content: space-between !important;}
+  &SA{justify-content: space-around !important;}
+}
+
+.ai{
+  &FS{align-items: flex-start !important;}
+  &FE{align-items: flex-end !important;}
+  &C{align-items: center !important;}
+  &S{align-items: stretch !important;}
+  &B{align-items: baseline !important;}
+}
+
+.ta {
+	&L{text-align: left !important;}
+	&R{text-align: right !important;}
+	&C{text-align: center !important;}
+}
+.va {
+	&T{vertical-align: top !important;}
+	&M{vertical-align: middle !important;}
+	&B{vertical-align: bottom !important;}
+	&TB{vertical-align: text-bottom !important;}
+}
+
+.flt{
+	&L{float: left !important;}
+	&R{float: right!important;}
+	&N{float: none!important;}
+}
+
+.pos{
+	&S{position:static !important;}
+	&R{position:relative !important;}
+	&A{position:absolute !important;}
+	&F{position:fixed !important;}
+}
+
+.brWord{word-wrap:break-word;}
+.waNw{white-space: nowrap;}
+
+.printDown{display:none;}
+.printBreak{display:none;}
+
+
+
+@include mq{
+.pc{display: none !important;}
+
+/*-- Width --*/
+.spWAuto{width:auto !important;}
+//$spiW : 0;
+//@while $spiW <= 300{
+//	.spW#{$spiW}{width: $spiW * 1px !important;}
+//	$spiW: $spiW+5;
+//}
+//$spiW2 : 1;
+//@while $spiW2 <= 100{
+//	.spW#{$spiW2}{
+//		&P{width: $spiW2 * 1% !important;}
+//		&V{width: $spiW2 * 1vw !important;}
+//		&E{width: $spiW2 * 0.1em !important;}
+//	}
+//	$spiW2: $spiW2+1;
+//}
+
+/*-- Margin --*/
+.spM{
+	&0{margin: 0 !important;}
+	&A{margin: auto !important;}
+	&TA{margin-top: auto !important;}
+	&RA{margin-right: auto !important;}
+	&BA{margin-bottom: auto !important;}
+	&LA{margin-left: auto !important;}
+}
+//$spiM : 0;
+//@while $spiM <= 100{
+//	.spM{
+//		&T#{$spiM}{margin-top: $spiM * 1px !important;}
+//		&R#{$spiM}{margin-right: $spiM * 1px !important;}
+//		&B#{$spiM}{margin-bottom: $spiM * 1px !important;}
+//		&L#{$spiM}{margin-left: $spiM * 1px !important;}
+//	}
+//	$spiM: $spiM+5;
+//}
+//
+//@for $spiMP from 0 through 100{
+//	.spM{
+//		&T#{$spiMP}P{margin-top: $spiMP * 1% !important;}
+//		&R#{$spiMP}P{margin-right: $spiMP * 1% !important;}
+//		&B#{$spiMP}P{margin-bottom: $spiMP * 1% !important;}
+//		&L#{$spiMP}P{margin-left: $spiMP * 1% !important;}
+//	}
+//	$spiMP: $spiMP+1;
+//}
+//
+//@for $spiMV from 0 through 100{
+//	.spM{
+//		&T#{$spiMV}V{margin-top: $spiMV * 1vw !important;}
+//		&R#{$spiMV}V{margin-right: $spiMV * 1vw !important;}
+//		&B#{$spiMV}V{margin-bottom: $spiMV * 1vw !important;}
+//		&L#{$spiMV}V{margin-left: $spiMV * 1vw !important;}
+//	}
+//	$spiMV: $spiMV+1;
+//}
+//
+//@for $spiME from 0 through 100{
+//	.spM{
+//		&T#{$spiME}E{margin-top: $spiME * 0.1em !important;}
+//		&R#{$spiME}E{margin-right: $spiME * 0.1em !important;}
+//		&B#{$spiME}E{margin-bottom: $spiME * 0.1em !important;}
+//		&L#{$spiME}E{margin-left: $spiME * 0.1em !important;}
+//	}
+//	$spiME: $spiME+1;
+//}
+
+
+/*-- Padding --*/
+.spP{
+	&0{padding: 0 !important;}
+	&A{padding: auto !important;}
+	&TA{padding-top: auto !important;}
+	&RA{padding-right: auto !important;}
+	&BA{padding-bottom: auto !important;}
+	&LA{padding-left: auto !important;}
+}
+
+//$spiP : 0;
+//@while $spiP <= 100{
+//	.spP{
+//		&T#{$spiP}{padding-top: $spiP * 1px !important;}
+//		&R#{$spiP}{padding-right: $spiP * 1px !important;}
+//		&B#{$spiP}{padding-bottom: $spiP * 1px !important;}
+//		&L#{$spiP}{padding-left: $spiP * 1px !important;}
+//	}
+//	$spiP: $spiP+5;
+//}
+//
+//@for $spiPP from 0 through 100{
+//	.spP{
+//		&T#{$spiPP}P{padding-top: $spiPP * 1% !important;}
+//		&R#{$spiPP}P{padding-right: $spiPP * 1% !important;}
+//		&B#{$spiPP}P{padding-bottom: $spiPP * 1% !important;}
+//		&L#{$spiPP}P{padding-left: $spiPP * 1% !important;}
+//	}
+//	$spiPP: $spiPP+1;
+//}
+//
+//@for $spiPV from 0 through 100{
+//	.spP{
+//		&T#{$spiPV}V{padding-top: $spiPV * 1vw !important;}
+//		&R#{$spiPV}V{padding-right: $spiPV * 1vw !important;}
+//		&B#{$spiPV}V{padding-bottom: $spiPV * 1vw !important;}
+//		&L#{$spiPV}V{padding-left: $spiPV * 1vw !important;}
+//	}
+//	$spiPV: $spiPV+1;
+//}
+//
+//@for $spiPE from 0 through 100{
+//	.spP{
+//		&T#{$spiPE}E{padding-top: $spiPE * 0.1em !important;}
+//		&R#{$spiPE}E{padding-right: $spiPE * 0.1em !important;}
+//		&B#{$spiPE}E{padding-bottom: $spiPE * 0.1em !important;}
+//		&L#{$spiPE}E{padding-left: $spiPE * 0.1em !important;}
+//	}
+//	$spiPE: $spiPE+1;
+//}
+
+/*-- Font --*/
+@for $iFz from 6 through 50{
+	.spFz#{$iFz}{font-size: $iFz * 1px;}
+	.spFz#{$iFz}R{font-size: $iFz * 0.1rem;}
+}
+
+.spFw{
+	&B{font-weight: bold !important;}
+	&N{font-weight: normal !important;}
+}
+
+@for $iLh from 8 through 30{
+	.spLh#{$iLh}{line-height: $iLh * 0.1 !important;}
+}
+
+/*-- Etc --*/
+.spDis{
+	&I{display:inline !important;}
+	&B{display:block !important;}
+	&IB{display:inline-block !important;}
+	&T{display:table !important;}
+	&TC{display:table-cell !important;}
+	&N{display:none !important;}
+	&F{display: flex !important;}
+}
+
+.spJc{
+  &FS{justify-content: flex-start !important;}
+  &FE{justify-content: flex-end !important;}
+  &C{justify-content: center !important;}
+  &SB{justify-content: space-between !important;}
+  &SA{justify-content: space-around !important;}
+}
+
+.spAi{
+  &FS{align-items: flex-start;}
+  &FE{align-items: flex-end !important;}
+  &C{align-items: center !important;}
+  &S{align-items: stretch !important;}
+  &B{align-items: baseline !important;}
+}
+
+.spTa {
+	&L{text-align: left !important;}
+	&R{text-align: right !important;}
+	&C{text-align: center !important;}
+}
+.spVa {
+	&T{vertical-align: top !important;}
+	&M{vertical-align: middle !important;}
+	&B{vertical-align: bottom !important;}
+	&TB{vertical-align: text-bottom !important;}
+}
+
+.spFlt{
+	&L{float: left !important;}
+	&R{float: right!important;}
+	&N{float: none!important;}
+}
+
+.spPos{
+	&S{position:static !important;}
+	&R{position:relative !important;}
+	&A{position:absolute !important;}
+	&F{position:fixed !important;}
+}
+
+
+
+}
