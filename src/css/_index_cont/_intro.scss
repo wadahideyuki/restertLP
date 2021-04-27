@@ -9,14 +9,24 @@ article:not(.introZone){
 .introZone{
   background-color: #eee;
   padding: 52px 0 59px;
+  @include mq{
+    padding: vw(32) 0 vw(44);
+  }
   h2{
     margin-bottom: 20px;
     color: $blue1;
     font-size: 3.9rem;
     font-weight: $fwBlk;
     text-align: center;
+    @include mq{
+      margin-bottom: vw(30);
+      font-size: 2.3rem;
+    }
     strong{
-      font-size: em(59/39);
+      font-size: 5.9rem;
+      @include mq{
+        font-size: 3.4rem;
+      }
       span{
         position: relative;
         &:before{
@@ -39,55 +49,101 @@ article:not(.introZone){
     display: flex;
     justify-content: center;
     overflow: hidden;
+    @include mq{
+    }
     img{
       width: 1759px;
       max-width: none;
+      @include mq{
+        width: 100%;
+      }
     }
   }
   .secSupport{
     margin-top: 82px;
+    @include mq{
+      margin-top: vw(18);
+    }
     h3{
       display: flex;
       justify-content: center;
       align-items: center;
       margin-bottom: 53px;
       line-height: 1;
+      @include mq{
+        margin: 0 vw(-10) vw(28);
+      }
       img{
+        @include mq{
+          width: vw(126);
+        }
       }
       span{
         margin-left: 14px;
         color: $blue1;
         font-size: 4.6rem;
         font-weight: $fwBlk;
+        @include mq{
+          margin-left: vw(8);
+          font-size: 2.2rem;
+        }
         strong{
           color: $orange1;
-          font-size: em(69/46);
+          font-size: 6.9rem;
+          letter-spacing: -0.07em;
+          @include mq{
+            font-size: 3.2rem;
+          }
         }
       }
     }
     ul{
       display: flex;
       justify-content: space-between;
+      @include mq{
+        display: block;
+      }
       > li{
         background-color: #fff;
         width: 321px;
         box-shadow: 10px 13px 56px rgba(0,0,0,0.16);
+        @include mq{
+          width: auto;
+          box-shadow: vw(10) vw(13) vw(56) rgba(0,0,0,0.16);
+        }
+        + li{
+          @include mq{
+            margin-top: vw(20);
+          }
+        }
         .img{
           img{
+            @include mq{
+              width: 100%;
+            }
           }
         }
         dl{
           padding: 25px 20px 35px;
           color: $blue1;
+          @include mq{
+            padding: vw(25) vw(20) vw(35);
+          }
         }
         dt{
           font-size: 1.8rem;
           font-weight: bold;
+          @include mq{
+            font-size: 1.9rem;
+          }
         }
         dd{
           margin-top: 5px;
           font-size: 1.6rem;
           line-height: (26/16);
+          @include mq{
+            margin-top: vw(5);
+          }
         }
       }
     }
