@@ -10,12 +10,20 @@ article:not(.voiceZone){
   background: url($pathImg + "voice/bg_wrap.png") center center repeat #eee;
   background-size: 31px 31px;
   padding: 42px 0 80px;
+  @include mq{
+    background-size: vw(15) vw(15);
+    padding: vw(22) 0 vw(44);
+  }
   h2{
     margin-bottom: 44px;
     color: $blue1;
+    @include mq{
+      margin-bottom: vw(21);
+    }
   }
   ul{
-    
+    @include mq{
+    }
   }
   li{
     display: flex;
@@ -25,16 +33,32 @@ article:not(.voiceZone){
     border: 2px solid $blue1;
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16);
-    + li{
-      margin-top: 20px;
+    @include mq{
+      display: block;
+      padding: vw(23) vw(15);
+      border-width: vw(2.1);
+      border-radius: vw(10);
+      box-shadow: 0 vw(3) vw(6) rgba(0,0,0,0.16);
     }
     .img{
       flex-shrink: 0;
       margin-right: 47px;
+      @include mq{
+        margin: 0 auto vw(18);
+      }
+      img{
+        @include mq{
+          width: 100%;
+        }
+      }
     }
     p{
       font-size: 1.6rem;
       line-height: (25/16);
+      @include mq{
+        font-size: 1.3rem;
+        line-height: (22/13);
+      }
       strong{
         background: linear-gradient(
           to bottom,
@@ -42,6 +66,33 @@ article:not(.voiceZone){
           transparent 34%,
           #FFFF00 34%
         );
+      }
+    }
+    + li{
+      margin-top: 20px;
+      @include mq{
+        margin-top: vw(20);
+      }
+    }
+    &:nth-child(1){
+      .img{
+        @include mq{
+          width: vw(220);
+        }
+      }
+    }
+    &:nth-child(2){
+      .img{
+        @include mq{
+          width: vw(213);
+        }
+      }
+    }
+    &:nth-child(3){
+      .img{
+        @include mq{
+          width: vw(199);
+        }
       }
     }
   }
