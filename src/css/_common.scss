@@ -80,7 +80,7 @@ section{
 /*--------------------------------------
  パーツ
 ---------------------------------------*/
-$innerW: 1300;
+$innerW: 1000;
 $innerW2: 1200;
 .u-{
   /* パディング */
@@ -112,8 +112,8 @@ $innerW2: 1200;
     }
     @include mq{
       &:not(.spPd0){
-        padding-left: vw(20);
-        padding-right: vw(20);
+        padding-left: vw(18);
+        padding-right: vw(18);
       }
     }
   }

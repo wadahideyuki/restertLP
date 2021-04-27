@@ -7,5 +7,88 @@ article:not(.mainZone){
 //  display: none;
 }
 .mainZone{
+  position: relative;
+  @include mq{
+  }
+  &:before{
+    content: "";
+    display: block;
+    background: url($pathImg + "main/person.png") 0 0 no-repeat;
+    width: 444px;
+    height: 573px;
+    margin-left: 59px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    @include mq{
+      background-size: contain;
+      width: vw(212);
+      height: vw(347);
+      top: vw(2);
+      bottom: auto;
+      left: auto;
+      right: vw(6);
+    }
+  }
+  h1{
+    padding: 36px 0 27px 13px;
+    @include mq{
+      padding: vw(18) 0 vw(15) vw(14);
+    }
+    img{
+      @include mq{
+        width: vw(206);
+      }
+    }
+  }
+  .bg{
+    background-color: $orange1;
+    padding-bottom: 17px;
+    @include mq{
+      padding-bottom: vw(24);
+      text-align: center;
+    }
+  }
+  .catch{
+    margin-bottom: -15px;
+    padding-left: 8px;
+    position: relative;
+    top: -27px;
+    @include mq{
+      margin-bottom: vw(-5);
+      padding-left: 0;
+      top: vw(-13);
+    }
+    img{
+      @include mq{
+        width: vw(340);
+      }
+    }
+  }
+  .txt{
+    margin-bottom: 20px;
+    padding-left: 11px;
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: $fwBlk;
+    @include mq{
+      margin-bottom: vw(14);
+      padding-left: 0;
+      font-size: 1.8rem;
+      line-height: (26/18);
+    }
+  }
+  .btn{
+    position: relative;
+    @include mq{
+      padding-left: vw(12);
+      padding-right: vw(12);
+    }
+    a{
+      display: block;
+      @include hvrBrt;
+    }
+  }
   
+
 }

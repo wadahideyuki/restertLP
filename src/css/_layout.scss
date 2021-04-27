@@ -8,6 +8,55 @@
 
 
 .l-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 81px;
+  padding: 0 17px 0 22px;
+  border-bottom: 10px solid $orange1;
+  @include mq{
+    padding: 0 0 0 vw(22);
+    border-bottom-width: vw(10);
+  }
+  h1{
+    @include mq{
+      width: vw(202);
+    }
+  }
+  .contact{
+    display: flex;
+    align-items: center;
+    @include mq{
+      display: none;
+    }
+    .tel{
+      display: flex;
+      align-items: center;
+      font-size: 2.7rem;
+      font-weight: $fwBlk;
+      @include mq{
+      }
+      &:before{
+        content: "";
+        display: block;
+        background: url($pathImg + "icn_tel.svg") 0 0 no-repeat;
+        width: 26px;
+        height: 26px;
+        margin-right: 7px;
+        @include mq{
+        }
+      }
+    }
+    .btn{
+      margin-left: 26px;
+      @include mq{
+      }
+      a{
+        display: block;
+        @include hvrBrt;
+      }
+    }
+  }
 }
 
 

@@ -5,8 +5,8 @@
 $pathImg: "../img/";
 
 //切替
-$pcDesign: 1400;
-$spDesign: 640;
+$pcDesign: 1200;
+$spDesign: 375;
 $breakPoint: 767;
 $tabBP: 1024;
 
@@ -25,6 +25,12 @@ $rem:100rem;
 //色
 $blue1: #1A274B;
 $orange1: #EB8500;
+
+//フォントの太さ
+$fwR: 400;
+$fwM:500;
+$fwB: 700;
+$fwBlk:900;
 
 
 //function
@@ -68,7 +74,7 @@ $orange1: #EB8500;
 	transition: background-color 0.3s;
 	&:hover{background-color: lighten($color, $per);}
 }
-@mixin hvrBrt($brt:1.5){
+@mixin hvrBrt($brt:1.3){
 	transition: filter 0.3s;
 	&:hover{filter: brightness(percentage($brt));}
 }
