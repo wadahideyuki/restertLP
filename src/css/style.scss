@@ -14,7 +14,12 @@
 
 //コンテンツ別
 @import "_index_cont/main";
-@import "_index_cont/cont1";
+@import "_index_cont/intro";
+@import "_index_cont/action";
+@import "_index_cont/voice";
+@import "_index_cont/flow";
+@import "_index_cont/company";
+@import "_index_cont/form";
 
 
 @import "_plugin/class";//単独クラス

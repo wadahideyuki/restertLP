@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+/*--------------------------------------
+ flow
+---------------------------------------*/
+article:not(.flowZone){
+//  display: none;
+}
+.flowZone{
+  background-color: #000;
+  color: #fff;
+  
+
+}

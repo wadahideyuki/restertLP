@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+/*--------------------------------------
+ form
+---------------------------------------*/
+article:not(.formZone){
+//  display: none;
+}
+.formZone{
+  .partTtl{
+    background-color: $orange1;
+  }
+  
+
+}

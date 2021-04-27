@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+/*--------------------------------------
+ action
+---------------------------------------*/
+article:not(.actionZone){
+//  display: none;
+}
+.actionZone{
+  background-color: $orange1;
+  h2{
+    color: #fff;
+  }
+
+}
