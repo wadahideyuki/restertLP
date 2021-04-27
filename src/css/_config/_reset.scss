@@ -81,10 +81,12 @@ input,textarea,select{
 /* ページ共通
 ---------------------------------------------------- */
 html{
+  min-width: 1100px;
 	color: #000;
 	font-size: 10px;
 	letter-spacing: 0;
 	@include mq{
+    min-width: 0;
 		font-size: vw(10);
 	}
 }
