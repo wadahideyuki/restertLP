@@ -13,6 +13,7 @@ article:not(.mainZone){
   position: relative;
   overflow: hidden;
   @include mq{
+    background: none;
     border-top-width: vw(7);
     border-bottom: none;
   }
@@ -38,6 +39,12 @@ article:not(.mainZone){
   }
   .u-inner{
     position: relative;
+  }
+  .partT{
+    @include mq{
+      background: url($pathImg + "main/bg_wrap_sp.png") center top no-repeat #f1f2ee;
+      background-size: cover;
+    }
   }
   h1{
     padding: 42px 0 0px 13px;
