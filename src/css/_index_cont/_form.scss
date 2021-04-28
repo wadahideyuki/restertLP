@@ -4,7 +4,7 @@
  form
 ---------------------------------------*/
 article:not(.formZone){
-  display: none;
+//  display: none;
 }
 .formZone{
   .partTtl{
@@ -13,7 +13,7 @@ article:not(.formZone){
     color: #fff;
     text-align: center;
     @include mq{
-      padding: vw(25) 0 vw(20);
+      padding: vw(10) 0 0;
     }
     h2{
       margin-bottom: 20px;
@@ -61,13 +61,18 @@ article:not(.formZone){
         font-size: 1.3rem;
       }
     }
+    .img{
+      img{
+        @include mq{
+          width: 100%;
+        }
+      }
+    }
   }//.partTtl
   .partForm{
     .u-inner{
       @include pc{
         max-width: 650px;
-      }
-      @include mq{
       }
     }
     .formBox {
@@ -79,6 +84,7 @@ article:not(.formZone){
       box-sizing: border-box;
       box-shadow: 15px 20px 20px 0px rgba(0, 0, 0, .1);
       @include mq {
+        margin-top: 0;
         border-radius: 0px;
         padding: 5vw;
       }
