@@ -4,6 +4,23 @@
  レイアウト
 ---------------------------------------*/
 .l-wrapper{
+//  &:before,
+//  &:after{
+//    content: "";
+//    display: block;
+//    background-color: #f00;
+//    width: 1px;
+//    height: 100vh;
+//    position: fixed;
+//    top: 0;
+//    left: 50%;
+//    z-index: 1000;
+//  }
+//  &:before{
+//    margin-left: -500px;
+//  }
+//  &:after{
+//  }
 }
 
 
@@ -13,7 +30,6 @@
   align-items: center;
   height: 81px;
   padding: 0 17px 0 22px;
-  border-bottom: 10px solid $orange1;
   @include mq{
     padding: 0 0 0 vw(22);
     border-bottom-width: vw(10);

@@ -7,34 +7,42 @@ article:not(.mainZone){
 //  display: none;
 }
 .mainZone{
+  background: url($pathImg + "main/bg_wrap.png") center center no-repeat #f1f2ee;
+  border-top: 10px solid $orange1;
+  border-bottom: 10px solid $orange1;
   position: relative;
   overflow: hidden;
   @include mq{
+    border-top-width: vw(7);
+    border-bottom: none;
   }
   &:before{
     content: "";
     display: block;
     background: url($pathImg + "main/person.png") 0 0 no-repeat;
-    width: 444px;
-    height: 573px;
-    margin-left: 59px;
+    width: 580px;
+    height: 587px;
+    margin-left: -117px;
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     left: 50%;
     @include mq{
       background-size: contain;
-      width: vw(212);
-      height: vw(347);
-      top: vw(2);
+      width: vw(210);
+      height: vw(220);
+      top: vw(20);
       bottom: auto;
       left: auto;
-      right: vw(6);
+      right: vw(15);
     }
   }
+  .u-inner{
+    position: relative;
+  }
   h1{
-    padding: 36px 0 27px 13px;
+    padding: 42px 0 0px 13px;
     @include mq{
-      padding: vw(18) 0 vw(15) vw(14);
+      padding: vw(21) 0 vw(20) vw(14);
     }
     img{
       @include mq{
@@ -43,44 +51,45 @@ article:not(.mainZone){
     }
   }
   .bg{
-    background-color: $orange1;
-    padding-bottom: 17px;
+    padding-bottom: 36px;
     @include mq{
+      background-color: $orange1;
       padding-bottom: vw(24);
       text-align: center;
+      position: relative;
     }
   }
   .catch{
-    margin-bottom: -15px;
+    margin-top: -5px;
+    margin-bottom: 6px;
     padding-left: 8px;
-    position: relative;
-    top: -27px;
     @include mq{
-      margin-bottom: vw(-5);
+      margin-bottom: vw(-13);
       padding-left: 0;
-      top: vw(-13);
+      position: relative;
+      top: vw(-15);
     }
     img{
       @include mq{
-        width: vw(340);
+        width: vw(349);
       }
     }
   }
   .txt{
-    margin-bottom: 20px;
+    margin-bottom: 28px;
     padding-left: 11px;
-    color: #fff;
-    font-size: 1.7rem;
+    color: #0E0E0E;
+    font-size: 1.6rem;
     font-weight: $fwBlk;
     @include mq{
       margin-bottom: vw(14);
       padding-left: 0;
+      color: #fff;
       font-size: 1.8rem;
       line-height: (26/18);
     }
   }
   .btn{
-    position: relative;
     @include mq{
       padding-left: vw(12);
       padding-right: vw(12);
