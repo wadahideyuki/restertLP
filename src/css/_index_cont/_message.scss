@@ -9,40 +9,61 @@ article:not(.messageZone){
 .messageZone{
   background: url($pathImg + "message/bg_wrap.png") center top no-repeat;
   background-size: 100% auto;
-  padding: 73px 0 76px;
+  padding: 74px 0 76px;
   color: $blue1;
   text-align: center;
   @include mq{
-    padding: vw(17) 0 vw(31);
+    padding: vw(25) 0;
   }
   h2{
     margin-bottom: 45px;
     @include mq{
-      margin-bottom: vw(24);
+      margin-bottom: vw(10);
       line-height: (22/14);
     }
   }
   .lead{
     font-size: 1.6rem;
     line-height: (26/16);
+    @include mq{
+      text-align: left;
+    }
   }
   .profBox{
     display: flex;
     background-color: #fff;
     max-width: 800px;
-    margin: 52px auto 0;
+    margin: 50px auto 0;
     padding: 23px 23px 19px;
     text-align: left;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    @include mq{
+      display: block;
+      margin-top: vw(30);
+      padding: vw(18);
+    }
     .img{
       flex-shrink: 0;
       width: 149px;
       margin-right: 26px;
+      @include mq{
+        width: auto;
+        margin: 0 0 vw(15);
+        text-align: center;
+      }
+      img{
+        @include mq{
+          width: 100%;
+        }
+      }
     }
     .txts{
       font-size: 1.3rem;
       line-height: (22/13);
+      @include mq{
+        font-size: 1.2rem;
+      }
       h3{
         font-weight: bold;
       }
