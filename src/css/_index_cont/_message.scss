@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+/*--------------------------------------
+ message
+---------------------------------------*/
+article:not(.messageZone){
+//  display: none;
+}
+.messageZone{
+  background: url($pathImg + "message/bg_wrap.png") center top no-repeat;
+  background-size: 100% auto;
+  padding: 73px 0 76px;
+  color: $blue1;
+  text-align: center;
+  @include mq{
+    padding: vw(17) 0 vw(31);
+  }
+  h2{
+    margin-bottom: 45px;
+    @include mq{
+      margin-bottom: vw(24);
+      line-height: (22/14);
+    }
+  }
+  .lead{
+    font-size: 1.6rem;
+    line-height: (26/16);
+  }
+  .profBox{
+    display: flex;
+    background-color: #fff;
+    max-width: 800px;
+    margin: 52px auto 0;
+    padding: 23px 23px 19px;
+    text-align: left;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    .img{
+      flex-shrink: 0;
+      width: 149px;
+      margin-right: 26px;
+    }
+    .txts{
+      font-size: 1.3rem;
+      line-height: (22/13);
+      h3{
+        font-weight: bold;
+      }
+    }
+  }
+
+}
