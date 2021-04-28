@@ -70,9 +70,17 @@
 
 .l-footer{
   padding: 92px 0 50px;
+  @include mq{
+    padding: vw(50) 0;
+  }
   .copyright{
     text-align: center;
     .img{
+      img{
+        @include mq{
+          width: vw(202);
+        }
+      }
     }
     p{
       margin-top: 1.0em;
