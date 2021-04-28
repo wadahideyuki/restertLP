@@ -1,12 +1,14 @@
 .partTtl
   .u-inner
-    h2 今スグ、廃業の悩みを相談
+    h2: span 今スグ、廃業の悩みを相談
+    p 以下のフォームに必要事項をご入力の上、#[br.sp]お問い合わせください。
+    .img: +img("form/img01.png", "")
 
 .partForm
   .u-inner
     // class, action, methodを変更しないでください
     .formBox
-      form.formrun(action="https://form.run/api/v1/r/y82y7e9xi00o6uqrqyolssa2" method="post")
+      form.formrun(action="https://form.run/api/v1/r/uyushxkotlkl8lqrzu1kl8yo" method="post")
         // ↓自由に要素を追加・編集することができます
         .row
           label 会社名 #[span.must 必須]
@@ -39,3 +41,6 @@
         .rowRcap
           .g-recaptcha(data-sitekey="6LdN6ssZAAAAAOOEOmHl4XnLCRx9-rTlpD3J80IX")
         button(type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..." disabled) 送信
+
+
+

@@ -4,12 +4,173 @@
  form
 ---------------------------------------*/
 article:not(.formZone){
-//  display: none;
+  display: none;
 }
 .formZone{
   .partTtl{
     background-color: $orange1;
-  }
-  
+    padding: 35px 0 18px;
+    color: #fff;
+    text-align: center;
+    @include mq{
+      padding: vw(25) 0 vw(20);
+    }
+    h2{
+      margin-bottom: 20px;
+      font-size: 4.1rem;
+      font-weight: $fwBlk;
+      @include mq{
+        margin-bottom: vw(10);
+        font-size: 2.4rem;
+      }
+      span{
+        position: relative;
+        @include mq{
+        }
+        &:before,
+        &:after{
+          content: "";
+          display: block;
+          background: url($pathImg + "form/txt_deco.svg") 0 0 no-repeat;
+          width: em(38/41);
+          height: em(47/41);
+          position: absolute;
+          top: em(12/41);
+          @include mq{
+          }
+        }
+        &:before{
+          left: em(-50/41);
+          @include mq{
+          }
+        }
+        &:after{
+          right: em(-50/41);
+          transform: scaleX(-1);
+          @include mq{
+          }
+        }
+      }
+    }
+    p{
+      margin-bottom: 15px;
+      font-size: 1.6rem;
+      font-weight: $fwM;
+      @include mq{
+        margin-bottom: vw(15);
+        font-size: 1.3rem;
+      }
+    }
+  }//.partTtl
+  .partForm{
+    .u-inner{
+      @include pc{
+        max-width: 650px;
+      }
+      @include mq{
+      }
+    }
+    .formBox {
+      position: relative;
+      background: #FFF;
+      border-radius: 15px;
+      margin-top: -60px;
+      padding: 45px 50px 135px;
+      box-sizing: border-box;
+      box-shadow: 15px 20px 20px 0px rgba(0, 0, 0, .1);
+      @include mq {
+        border-radius: 0px;
+        padding: 5vw;
+      }
+      .formrun-system-show {
+        color: tomato;
+      }
+    }
+    .row {
+      margin-bottom: 20px;
+      @include mq{
+      }
+      label {
+        display: flex;
+        align-items: center;
+        padding-bottom: 5px;
+        font-size: 16px;
+        font-weight: 100;
+        @include mq {
+          font-size: 14px;
+        }
+        &.kojin {
+          justify-content: center;
+          align-items: center;
+          padding: 15px 0;
+          @include mq{
+          }
+          input {
+            margin-right: 10px;
+            width: 1.2em;
+            height: 1.2em;
+            @include mq{
+            }
+          }
+        }
+        .must {
+          margin-left: 10px;
+          background: #d9534f;
+          color: #FFF;
+          border-radius: 5px;
+          display: inline-block;
+          padding: .3em .5em;
+          line-height: 1.4;
+          font-size: 12px;
+          font-weight: bold;
+          @include mq{
+          }
+        }
+      }
+      input[type="text"],
+      textarea {
+        display: block;
+        border: 1px solid #d9d9d9;
+        width: 100%;
+        box-sizing: border-box;
+        padding: .3em 1em;
+        border-radius: 5px;
+        background: #fff;
+        font-weight: 100;
+        @include mq {
+          padding: .5em;
+          font-size: 14px;
+        }
+      }
+      textarea {
+        height: 8em;
+        @include mq{
+        }
+      }
+    }
+    .rowRcap {
+      margin-bottom: 15px;
+      @include mq{
+      }
+    }
+    button {
+      color: #FFF;
+      width: 100%;
+      background: #000;
+      text-align: center;
+      font-size: 2rem;
+      border-radius: 8px;
+      padding: .5em 0;
+      cursor: pointer;
+      @include mq {
+        font-size: 18px;
+      }
+      &:disabled {
+        pointer-events: none;
+        background: #d6dde2;
+      }
+    }
+  }//.partForm
+
 
 }

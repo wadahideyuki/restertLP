@@ -61,7 +61,6 @@
 
 
 .l-cont{
-  
 }
 
 
@@ -70,6 +69,16 @@
 
 
 .l-footer{
+  padding: 92px 0 50px;
+  .copyright{
+    text-align: center;
+    .img{
+    }
+    p{
+      margin-top: 1.0em;
+      font-size: 1.1rem;
+    }
+  }
 }
 
 
